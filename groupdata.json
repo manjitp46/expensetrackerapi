@@ -3,6 +3,9 @@
         "id": "1",
         "name": "dummygroup",
         "users": ["userid1","userid2","userid3","userid4"],
+        "simpleDabit": false,
+        "createdBy": "Name",
+        "createdDate": "Current Date",
         "expenses": [
             {
                 "id": "1",

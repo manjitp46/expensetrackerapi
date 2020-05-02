@@ -17,12 +17,24 @@ public class User {
 
     }
 
-    public User(String name, String email) {
+    public User(String id, String name, String email) {
         this.name = name;
         this.email = email;
     }
 
 
+    /**
+     * @return the id
+     */
+    public String getId() {
+        return id;
+    }
+    /**
+     * @param id the id to set
+     */
+    public void setId(String id) {
+        this.id = id;
+    }
     /**
      * @return the name
      */
