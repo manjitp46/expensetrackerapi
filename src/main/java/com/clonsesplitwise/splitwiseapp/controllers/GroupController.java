@@ -1,0 +1,23 @@
+package com.clonsesplitwise.splitwiseapp.controllers;
+
+import com.clonsesplitwise.splitwiseapp.models.Groups;
+import com.clonsesplitwise.splitwiseapp.repository.GroupRepository;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+@RestController
+@RequestMapping("/api/v1")
+public class GroupController {
+    
+    
+
+    @PostMapping("/addgroup")
+    public ResponseEntity<Groups> addGroup(@RequestBody Groups group) {
+        return null;
+    }
+}

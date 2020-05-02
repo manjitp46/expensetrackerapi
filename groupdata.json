@@ -1,0 +1,69 @@
+[
+    {
+        "id": "1",
+        "name": "dummygroup",
+        "users": ["userid1","userid2","userid3","userid4"],
+        "expenses": [
+            {
+                "id": "1",
+                "description": "some random expenses",
+                "paidby": [
+                    {
+                        "userid": "userid1",
+                        "amount": 500
+                    }
+                ],
+                "dividedin":["userid1","userid2"]
+            },
+            {
+                "id": "2",
+                "description": "some random expenses",
+                "paidby": [
+                    {
+                        "userid": "userid1",
+                        "amount": 500
+                    },
+                    {
+                        "userid": "userid2",
+                        "amount": 10000
+                    }
+                ],
+                "dividedin":["userid1","userid2","userid3"]
+            }
+        ]
+    },
+    {
+        "id": "2",
+        "name": "maygroup",
+        "users": ["userid1","userid2","userid3","userid4"],
+        "expenses": [
+            {
+                "id": "1",
+                "description": "some random expenses",
+                "paidby": [
+                    {
+                        "userid": "userid1",
+                        "amount": 500
+                    }
+                ],
+                "dividedin":["userid1","userid2"]
+            },
+            {
+                "id": "2",
+                "description": "some random expenses",
+                "paidby": [
+                    {
+                        "userid": "userid1",
+                        "amount": 500
+                    },
+                    {
+                        "userid": "userid2",
+                        "amount": 10000
+                    }
+                ],
+                "dividedin":["userid1","userid2","userid3"]
+            }
+        ]
+    }
+    
+]
