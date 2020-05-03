@@ -1,6 +1,5 @@
 package com.clonsesplitwise.splitwiseapp.controllers;
 
-import java.util.ArrayList;
 import java.util.List;
 
 import com.clonsesplitwise.splitwiseapp.models.User;
@@ -34,8 +33,7 @@ public class UsersController {
     @GetMapping("/users")
     public ResponseEntity<List<User>> showAllUsers() {
         try {
-            List<User> _user = new ArrayList<User>();
-            userRepo.findAll().forEach(_user::add);
+            List<User> _user = userRepo.findAll();
             if (_user.isEmpty()) {
                 return new ResponseEntity<>(HttpStatus.NO_CONTENT);
             }

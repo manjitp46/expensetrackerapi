@@ -7,24 +7,21 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
-@Document(collation = "groups")
+@Document(collection  = "groups")
 public class Groups {
-
-    @Autowired
-    User usr;
     
     @Id
     private String id;
 
     private String name;
 
-    private List<String> users;
+    private List<User> users;
 
     private List<Expenses> expenses;
 
     private boolean simpleDabit = false;
 
-    private String createdBy;
+    private User createdBy;
 
     private Date createdDate = new Date();
 
@@ -32,15 +29,21 @@ public class Groups {
 
     }
 
-    public Groups(String name, List<String> users, List<Expenses> expenses, 
-        boolean simpleDabit, String createdBy, Date createdDate){
+    public Groups(String name, List<User> groupUsers, User createdBy ) {
         this.name = name;
-        this.users = users;
-        this.expenses = expenses;
-        this.simpleDabit = simpleDabit;
+        this.users = groupUsers;
         this.createdBy = createdBy;
-        this.createdDate = createdDate;
     }
+
+    // public Groups(String name, List<String> users, List<Expenses> expenses, 
+    //     boolean simpleDabit, String createdBy, Date createdDate){
+    //     this.name = name;
+    //     this.users = users;
+    //     this.expenses = expenses;
+    //     this.simpleDabit = simpleDabit;
+    //     this.createdBy = createdBy;
+    //     this.createdDate = createdDate;
+    // }
 
     /**
      * @return the name
@@ -57,13 +60,13 @@ public class Groups {
     /**
      * @return the users
      */
-    public List<String> getUsers() {
+    public List<User> getUsers() {
         return users;
     }
     /**
      * @param users the users to set
      */
-    public void setUsers(List<String> users) {
+    public void setUsers(List<User> users) {
         this.users = users;
     }
     /**
@@ -91,13 +94,13 @@ public class Groups {
      /**
       * @param createdBy the createdBy to set
       */
-     public void setCreatedBy(String createdBy) {
+     public void setCreatedBy(User createdBy) {
          this.createdBy = createdBy;
      }
      /**
       * @return the createdBy
       */
-     public String getCreatedBy() {
+     public User getCreatedBy() {
          return createdBy;
      }
      /**

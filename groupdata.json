@@ -2,7 +2,7 @@
     {
         "id": "1",
         "name": "dummygroup",
-        "users": ["userid1","userid2","userid3","userid4"],
+        "users": [{},{},{}],
         "simpleDabit": false,
         "createdBy": "Name",
         "createdDate": "Current Date",
@@ -12,7 +12,9 @@
                 "description": "some random expenses",
                 "paidby": [
                     {
-                        "userid": "userid1",
+                        "user": {
+
+                        },
                         "amount": 500
                     }
                 ],
@@ -31,7 +33,7 @@
                         "amount": 10000
                     }
                 ],
-                "dividedin":["userid1","userid2","userid3"]
+                "dividedin":[{},{},{}]
             }
         ]
     },

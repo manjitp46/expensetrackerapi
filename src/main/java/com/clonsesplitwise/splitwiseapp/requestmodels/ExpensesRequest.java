@@ -1,16 +1,15 @@
-package com.clonsesplitwise.splitwiseapp.models;
+package com.clonsesplitwise.splitwiseapp.requestmodels;
 
 import java.util.List;
 
-public class Expenses {
-
+public class ExpensesRequest {
     private String id;
     private String description;
-    private List<PaidBy> paidby;
+    private List<String> paidby;
     private List<String> dividedin;
 
-    public Expenses() {
-
+    public String getId() {
+        return id;
     }
 
     public List<String> getDividedin() {
@@ -21,11 +20,11 @@ public class Expenses {
         this.dividedin = dividedin;
     }
 
-    public List<PaidBy> getPaidby() {
+    public List<String> getPaidby() {
         return paidby;
     }
 
-    public void setPaidby(List<PaidBy> paidby) {
+    public void setPaidby(List<String> paidby) {
         this.paidby = paidby;
     }
 
@@ -37,19 +36,9 @@ public class Expenses {
         this.description = description;
     }
 
-    public String getId() {
-        return id;
-    }
-
     public void setId(String id) {
         this.id = id;
     }
 
-    public Expenses(String id, String description, List<PaidBy> paidby, List<String> dividedin) {
-        this.setId(id);
-        this.setDescription(description);
-        this.setPaidby(paidby);
-        this.setDividedin(dividedin);
-    }
-
+    
 }
