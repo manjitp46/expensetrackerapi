@@ -1,31 +1,41 @@
 package com.clonsesplitwise.splitwiseapp.models;
 
 import java.util.List;
+import java.util.UUID;
 
 public class Expenses {
 
     private String id;
     private String description;
-    private List<PaidBy> paidby;
-    private List<String> dividedin;
+    private User paidby;
+    private List<User> dividedin;
+    private float amount;
 
     public Expenses() {
 
     }
 
-    public List<String> getDividedin() {
+    public float getAmount() {
+        return amount;
+    }
+
+    public void setAmount(float amount) {
+        this.amount = amount;
+    }
+
+    public List<User> getDividedin() {
         return dividedin;
     }
 
-    public void setDividedin(List<String> dividedin) {
+    public void setDividedin(List<User> dividedin) {
         this.dividedin = dividedin;
     }
 
-    public List<PaidBy> getPaidby() {
+    public User getPaidby() {
         return paidby;
     }
 
-    public void setPaidby(List<PaidBy> paidby) {
+    public void setPaidby(User paidby) {
         this.paidby = paidby;
     }
 
@@ -45,11 +55,13 @@ public class Expenses {
         this.id = id;
     }
 
-    public Expenses(String id, String description, List<PaidBy> paidby, List<String> dividedin) {
-        this.setId(id);
-        this.setDescription(description);
-        this.setPaidby(paidby);
-        this.setDividedin(dividedin);
+    public Expenses(String description, User paidby, List<User> dividedin, float amount) {
+        this.id = UUID.randomUUID().toString();
+        this.description = description;
+        this.paidby = paidby;
+        this.dividedin = dividedin;
+        this.amount = amount;
+        
     }
 
 }
